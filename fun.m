@@ -1,0 +1,12 @@
+function dX=fun(t,X)
+m=1;
+l=1;
+b1=0.1;
+b2=0.1;
+k2=20;
+g=10;
+dX1=X(2);
+dX2=-(g*sin(X(1))+b1/m*X(2)+2*X(4)*X(2))/(l+X(3));
+dX3=X(4);
+dX4=g*cos(X(1))+(l+X(3))*X(2)^2-k2/m*X(3)-b2/m*X(4);
+dX=[dX1;dX2;dX3;dX4];
